@@ -14,7 +14,26 @@ bot.on('ready', () => {
 });
 
 bot.on('message', msg => {
-  if(msg.content[0]!='!')
+  /*
+  if(msg.content=="choose"){
+    msg.channel.fetchMessages().then(messages =>{
+      finalArray = []
+      messages.array().forEach(message => {
+        if(message.author.id != '847848403479691316' && message.content!="choose")
+              {
+                finalArray.push(message.content)
+              }     
+      });
+      console.log(finalArray)
+    })
+  }
+  */
+  /*
+  if(msg.content=="flood"){
+    utils.movie_list.map((i)=>{msg.channel.send(i)})
+  }
+ */
+  if(msg.content[0]!='!' || message.author.id=='847848403479691316')
     return;
   let content = msg.content.substring(1).trim().toLowerCase();
   var msgtok = content.split(" ");
@@ -59,18 +78,5 @@ bot.on('message', msg => {
       break
     }
   }
-  /*
-  if(content){
-    msg.channel.fetchMessages().then(messages => {
-      finalArray = []
-      messages.array().forEach(message => {
-        if(message.content!='choose' && message.author.id != '847848403479691316')
-              {
-                finalArray.push(message.content)
-              }
-      });
-      msg.reply(finalArray[Math.floor(Math.random() * finalArray.length)])
-  })
-  }
-  */
+ 
 });
