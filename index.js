@@ -29,14 +29,17 @@ bot.on('message', msg => {
           if(message.author.id != '847848403479691316' && msgcontent[0]=="!"+choice)
                 {
                   msgcontent.shift()
-                  finalArray.push(msgcontent.join(" "))
+                  finalArray.push([msgcontent.join(" "),message.id])
                 }     
         });
         let len = finalArray.length
         if(len==0)
           msg.reply(`Oh boi!😔 No ${choice} found! Maybe add something to your list by using **!${choice} <ENTRY>** ?`)
         else
-          msg.reply(finalArray[utils.randomNumber(len)])
+        {
+          let reply = finalArray[utils.randomNumber(len)]
+          msg.reply(`👀 The ${choice} choice for the day is **${reply[0]}**! To 🗑️ from list use the command **!remove ${reply[1]}** !`)
+        }
     })
       break;
     }
@@ -48,6 +51,12 @@ bot.on('message', msg => {
     case "about" : {
       msg.channel.send("The **ChooseForMe Bot** 🍿 says Hi! \n I help you make bucket lists on the Server Channel and helps you make spontaneous plans on the go 🚀")
       break;
+    }
+    case "remove" : {
+      msg.channel.fetchMessage(msgtok[1]).then(message => {
+        message.delete()
+      })
+      break
     }
   }
   /*
