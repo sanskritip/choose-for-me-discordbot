@@ -2,7 +2,8 @@
 # 🍿 ChooseForMe Bot
 
 > Goals and dreams that are not written down are just wishes.
-> -- Anonymous
+> 
+> ~ Anonymous
 
 The **ChooseForMe** Bot is a simple easy to use bot which helps you curate bucket lists and ensures the zeal and spontaneity is you to stay alive! ✨
 
