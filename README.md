@@ -5,7 +5,7 @@
 > 
 > ~ Anonymous
 
-The **ChooseForMe** Bot is a simple easy to use bot which helps you curate bucket lists and ensures the zeal and spontaneity is you to stay alive! ✨
+The **ChooseForMe** Bot is a simple easy to use bot which helps you curate bucket lists and ensures the zeal and spontaneity in you to stay alive! ✨
 
 Invite ChooseForMe to your server from here - [ChooseForMe](https://discord.com/oauth2/authorize?client_id=847848403479691316&permissions=0&scope=bot) 
 
